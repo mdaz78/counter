@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import CustomButton from "./CustomButton";
 
 function App() {
   const [counter, setCounter] = React.useState(0);
@@ -7,9 +8,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>{counter}</h1>
-        <button onClick={() => setCounter(counter + 1)}>Increment</button>
-        <button onClick={() => setCounter(counter - 1)}>Decrement</button>
+        <CustomButton count={counter} setCount={setCounter} />
       </div>
     </>
   );
